@@ -140,3 +140,22 @@ footer{
   footer{padding:20px 18px;display:block}
   footer span{display:block;margin:5px 0}
 }
+/* Portfolio image sizing */
+.image-placeholder {
+    min-height: 0;
+    background: none;
+}
+
+.image-placeholder img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.tall .image-placeholder,
+.wide .image-placeholder {
+    min-height: 0;
+}
