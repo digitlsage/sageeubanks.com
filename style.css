@@ -140,22 +140,66 @@ footer{
   footer{padding:20px 18px;display:block}
   footer span{display:block;margin:5px 0}
 }
-/* Portfolio image sizing */
-.image-placeholder {
-    min-height: 0;
-    background: none;
-}
+/* Portfolio layout override */
 
-.image-placeholder img {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 80px 60px;
+    align-items: start;
+    max-width: 1100px;
     margin: 0 auto;
-    object-fit: contain;
+    padding: 70px 40px;
 }
 
+.work-card,
+.work-card.tall,
+.work-card.wide {
+    grid-column: auto;
+    width: 100%;
+    max-width: 450px;
+    min-width: 0;
+}
+
+.image-placeholder,
 .tall .image-placeholder,
 .wide .image-placeholder {
     min-height: 0;
+    width: 100%;
+    background: none;
+    overflow: visible;
+}
+
+.image-placeholder::before {
+    display: none;
+}
+
+.image-placeholder img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .work-grid {
+        display: block;
+        padding: 45px 22px;
+    }
+
+    .work-card,
+    .work-card.tall,
+    .work-card.wide {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .image-placeholder img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
 }
