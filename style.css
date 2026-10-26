@@ -157,7 +157,7 @@ footer{
 .work-card.wide {
     grid-column: auto;
     width: 100%;
-    max-width: 450px;
+    max-width: 350px;
     min-width: 0;
 }
 
@@ -179,7 +179,7 @@ footer{
     display: block;
     width: 100%;
     height: auto;
-    max-width: 450px;
+    max-width: 350px;
     object-fit: contain;
 }
 
